@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SimbaArena - Africa's Gaming Pride</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/themes.css">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo-container">
+            <img src="images/simba-logo.png" alt="SimbaArena Logo" class="logo">
+            <h1>SimbaArena</h1>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="forums.html">Forums</a></li>
+            <li><a href="deals.html">Game Deals</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="about.html">About</a></li>
+            <li class="auth-buttons">
+                <button id="loginBtn" class="btn">Login</button>
+                <button id="registerBtn" class="btn btn-primary">Register</button>
+            </li>
+        </ul>
+        <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Africa's Gaming Pride</h2>
+            <p>Join the fastest growing gaming community in Africa. Connect, compete, and celebrate African gaming culture.</p>
+            <div class="hero-buttons">
+                <button class="btn btn-primary">Join Now</button>
+                <button class="btn btn-outline">Explore Forums</button>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="images/african-gamer-hero.png" alt="African Gamer">
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="feature-card">
+            <div class="icon"><i class="fas fa-users"></i></div>
+            <h3>Vibrant Community</h3>
+            <p>Connect with gamers across Africa in our active forums and Discord.</p>
+        </div>
+        <div class="feature-card">
+            <div class="icon"><i class="fas fa-tags"></i></div>
+            <h3>Exclusive Deals</h3>
+            <p>Get the best prices on games tailored for African markets.</p>
+        </div>
+        <div class="feature-card">
+            <div class="icon"><i class="fas fa-trophy"></i></div>
+            <h3>Tournaments</h3>
+            <p>Compete in local and pan-African esports competitions.</p>
+        </div>
+    </section>
+
+    <!-- Latest Forum Posts -->
+    <section class="forum-preview">
+        <h2 class="section-title">Latest Discussions</h2>
+        <div class="posts-container">
+            <!-- Posts will be loaded dynamically -->
+        </div>
+        <a href="forums.html" class="btn">View All Discussions</a>
+    </section>
+
+    <!-- Game Deals Preview -->
+    <section class="deals-preview">
+        <h2 class="section-title">Hot Deals</h2>
+        <div class="deals-container">
+            <!-- Deals will be loaded dynamically -->
+        </div>
+        <a href="deals.html" class="btn">View All Deals</a>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="images/simba-logo-white.png" alt="SimbaArena Logo">
+                <h3>SimbaArena</h3>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="forums.html">Forums</a></li>
+                    <li><a href="deals.html">Deals</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <h4>Follow Us</h4>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-discord"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 SimbaArena. All rights reserved. Proudly African.</p>
+        </div>
+    </footer>
+
+    <!-- Auth Modal -->
+    <div class="auth-modal" id="authModal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="auth-tabs">
+                <button class="tab-btn active" data-tab="login">Login</button>
+                <button class="tab-btn" data-tab="register">Register</button>
+            </div>
+            <div class="tab-content active" id="login">
+                <form id="loginForm">
+                    <div class="form-group">
+                        <label for="loginEmail">Email</label>
+                        <input type="email" id="loginEmail" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="loginPassword">Password</label>
+                        <input type="password" id="loginPassword" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Login</button>
+                </form>
+            </div>
+            <div class="tab-content" id="register">
+                <form id="registerForm">
+                    <div class="form-group">
+                        <label for="regUsername">Username</label>
+                        <input type="text" id="regUsername" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="regEmail">Email</label>
+                        <input type="email" id="regEmail" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="regPassword">Password</label>
+                        <input type="password" id="regPassword" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="regConfirmPassword">Confirm Password</label>
+                        <input type="password" id="regConfirmPassword" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Register</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script src="scripts/main.js"></script>
+    <script src="scripts/auth.js"></script>
+</body>
+</html>
